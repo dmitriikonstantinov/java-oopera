@@ -1,7 +1,9 @@
 import java.util.Objects;
+
 public class Actor extends Person {
-   private int height;
-   public Actor (String name, String surname,Gender gender, int height) {
+    private int height;
+
+    public Actor(String name, String surname, Gender gender, int height) {
         super(name, surname, gender);
         this.height = height;
     }
@@ -14,6 +16,7 @@ public class Actor extends Person {
     public String toString() {
         return "Актер " + getName() + " " + getSurname() + " рост - " + height + " см";
     }
+
     @Override
     public boolean equals(Object obj) {
         if (this == obj) return true;

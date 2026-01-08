@@ -6,12 +6,15 @@ public class Theatre {
         Actor actor3 = new Actor("Илья", "Кочетов", Gender.MALE, 176);
         Director director1 = new Director("Федор", "Климов", Gender.MALE, 12);
         Director director2 = new Director("Станислав", "Воробьев", Gender.MALE, 8);
-        Ballet ballet = new Ballet("Щелкунчик", 180, "П.И.Чайковский",
+        Person musicAuthor = new Person("Петр", "Чайковский", Gender.MALE);
+        Person musicAuthor2 = new Person("Джузеппе", "Верди", Gender.MALE);
+        Person choreographer = new Person("Иван", "Высоких", Gender.MALE);
+        Ballet ballet = new Ballet("Щелкунчик", 180, director1, musicAuthor,
                 "По мотивам сказки Э. Т. А. Гофмана «Щелкунчик и мышиный король»",
-                "Иван Высоких");
-        Opera opera = new Opera("Травиатта", 180, "Джузеппе Верди", "История любви" +
+                choreographer);
+        Opera opera = new Opera("Травиатта", 180, director2, musicAuthor2, "История любви" +
                 " Виолетты и Альфредо", 37);
-        Show show = new Show("Вишневый сад", 120);
+        Show show = new Show("Вишневый сад", 120, director1);
         show.addActor(actor1);
         show.addActor(actor3);
 
@@ -41,6 +44,8 @@ public class Theatre {
 
         System.out.println(opera.getLibrettoText());
         System.out.println(ballet.getLibrettoText());
+        System.out.println(director1);
+
 
     }
 
